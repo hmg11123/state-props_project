@@ -43,8 +43,8 @@ class App extends React.Component {
         basket: prodect
       })
     }
-    await this.setState({
-      amount: this.state.amount + 1
+    await this.setState((state) => {
+      return { amount: this.state.amount + 1 }
     })
 
     alert("장바구니에 추가되었습니다")
